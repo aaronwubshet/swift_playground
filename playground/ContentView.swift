@@ -9,13 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, woahaasfsdfasdf!")
+        ZStack {
+            Color(.black).ignoresSafeArea()
+            
+            VStack {
+                
+                Image("zionstars")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.all)
+                    .cornerRadius(15)
+                Text("This is a picture of Zion National Park")
+                    .font(.caption)
+                    .fontWeight(.light)
+                    .foregroundColor(Color.white)
+                    .multilineTextAlignment(.center)
+                    
+            }
         }
-        .padding()
+        
+        
     }
 }
 
